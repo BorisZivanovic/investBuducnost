@@ -23,7 +23,7 @@
   </head>
   <body>
     <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" style="border: 1px solid #005598;">
         <div class="container">
           <div class="ms-4">
             <img width="148vw" src="./assets/logo2.png" />
@@ -47,6 +47,7 @@
               <a class="nav-link mx-3 text-primary" style="color:#005598 !important" href="/usluge.html">Naše Usluge</a>
               <a class="nav-link mx-3 text-primary" style="color:#005598 !important" href="/proces.html"><b>Proces</b></a>
               <a class="nav-link mx-3 text-primary" style="color:#005598 !important" href="/viza.html">Turistička Viza</a>
+              <a class="nav-link mx-3 text-primary" style="color:#005598 !important" href="/posao.html">Zapošljavanje</a>
               <a class="nav-link mx-3 text-primary" style="color:#005598 !important" href="/kontak.html">Kontakt</a>
             </div>
           </div>
@@ -58,6 +59,50 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+
+    <div style="position: fixed; right: 20px; top: 50%; transform: translateY(-50%); z-index: 999;">
+      <!-- Facebook ikonica -->
+      <a href="https://www.facebook.com/investbuducnost" target="_blank" style="display: block; width: 40px; height: 40px; line-height: 40px; text-align: center; background-color: #333; color: #fff; border-radius: 50%; margin-bottom: 10px; transition: background-color 0.3s ease; text-decoration: none;" onmouseover="changeColor(this)" onmouseout="restoreColor(this)"><i id="facebookIcon"  class="bi bi-facebook"></i></a>
+      
+      <!-- Instagram ikonica -->
+      <a href="https://www.instagram.com/invest_buducnost?igsh=OHl3OGV6NDJmcTQ3" target="_blank" style="display: block; width: 40px; height: 40px; line-height: 40px; text-align: center; background-color: #333; color: #fff; border-radius: 50%; margin-bottom: 10px; transition: background-color 0.3s ease; text-decoration: none;" onmouseover="changeColor(this)" onmouseout="restoreColor(this)"><i id="instagramIcon" class="bi bi-instagram"></i></a>
+      
+      <!-- E-pošta (Mail) ikonica -->
+      <a href="mailto:investbuducnost@gmail.com" style="display: block; width: 40px; height: 40px; line-height: 40px; text-align: center; background-color: #333; color: #fff; border-radius: 50%; margin-bottom: 10px; transition: background-color 0.3s ease; text-decoration: none;" onmouseover="changeColor(this)" onmouseout="restoreColor(this)"><i id="mailIcon" class="bi bi-envelope"></i></a>
+    </div>
+
+    <script>
+      function changeColor(element) {
+          element.style.backgroundColor = "blue"; // Boja na hover
+      }
+
+      function restoreColor(element) {
+          element.style.backgroundColor = "#333"; // Početna boja
+      }
+    </script>
+
+    <div id="scrollToTopButton" class="position-fixed bottom-0 end-0 p-3" style="display: none;">
+      <button class="btn btn-primary" onclick="scrollToTop()">
+        <i class="fas fa-chevron-circle-up"></i> Idi na početak
+      </button>
+    </div>
+
+    <script>
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              document.getElementById("scrollToTopButton").style.display = "block";
+          } else {
+              document.getElementById("scrollToTopButton").style.display = "none";
+          }
+      }
+
+      function scrollToTop() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+      }
+    </script>
 
       <div
         class="masthead d-flex justify-content-center align-items-center"
@@ -248,33 +293,64 @@
       </div>
     </div>
     <br />
-    <div class="container-fluid bg-light" id="footer">
-      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top ">
-        <div class="col-md-4 d-flex align-items-center">
-          <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-              <img width="260vw" src="./assets/logo2.png" />
-          </a>
-        </div>
-          <div class="d-flex flex-column justify-content-center align-items-center text-center">
-            <div class="d-flex flex-column">
-              <h5 style="color: #0B0C24 !important;">KONTAKT</h5>
-              <br/>
-              <h6 style="color: #0B0C24 !important;"><i class="bi bi-telephone"></i><a href="tel:+381693300363" style="text-decoration: none; color: #0B0C24 !important; cursor: pinter;"> +381693300363</a></h6>
-                <h6 style="color: #0B0C24 !important;"><i class="bi bi-telephone"></i> +381638145120</h6>
-          </div>
-          </div>
 
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-          <div class="d-flex flex-column">
-            <h5 style="color: #0B0C24 !important;">SOCIJALNE MREŽE</h5>
-            <br/>
-            <h6 style="color: #0B0C24 !important;"><i class="bi bi-facebook"></i> Invest Buducnost</h6>
-            <h6 style="color: #0B0C24 !important;"><i class="bi bi-instagram"></i> invest_buducnost</h6>
-            <h6 style="color: #0B0C24 !important;"><i class="bi bi-envelope"></i> investbuducnost@gmail.com</h6>
-        </div>
-        </ul>
-        <div class="col-12 justify-content-center align-items-center text-center mt-4"><h6 style="color:#0B0C24 !important">Direktor INVEST BUDUCNOST Bogdan Radosavljević</h6></div>
+    <div class="container-fluid bg-light" id="footer">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+              <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                  <img width="260vw" src="./assets/logo2.png" class="img-fluid" />
+              </a>
+          </div>
+  
+          <div class="col-md-4 d-flex flex-column align-items-center text-center">
+              <h5 style="color: #0b0c24 !important">KONTAKT</h5>
+              <h6 style="color: #0B0C24 !important;"><i class="bi bi-telephone"></i><a href="tel:+381693300363" style="text-decoration: none; color: #0B0C24 !important; cursor: pinter;"> +381692601500</h6>
+              <h6 style="color: #0B0C24 !important;"><i class="bi bi-telephone"></i> +381693300363</a></h6>          </div>
+  
+          <div class="col-md-4 d-flex flex-column align-items-center text-center">
+              <h5 style="color: #0b0c24 !important">SOCIJALNE MREŽE</h5>
+              <h6 style="color: #0b0c24 !important"><a href="https://www.facebook.com/investbuducnost" target="_blank"><i class="bi bi-facebook" style="color: blue !important"></i> Invest Budućnost</a></h6>
+              <h6 style="color: #0b0c24 !important"><a href="https://www.instagram.com/invest_buducnost/" target="_blank"><i class="bi bi-instagram" style="color: blue !important"></i> invest_buducnost</a></h6>
+              <h6 style="color: #0b0c24 !important"><a href="mailto:investbuducnost@gmail.com" target="_blank"><i class="bi bi-envelope" style="color: blue !important"></i> investbuducnost@gmail.com</a></h6>
+          </div>
+  
+          <div class="col-12 d-flex justify-content-center align-items-center text-center mt-4">
+              <style>
+                  /* Stilovi za linkove */
+                  h6 a {
+                      color: #0b0c24 !important;
+                      text-decoration: none;
+                  }
+              
+                  /* Stilovi za hover */
+                  h6 a:hover {
+                      color: blue !important;
+                      text-decoration: underline;
+                      background-color: lightblue;
+                  }
+              
+                  /* Stilovi za posećene linkove */
+                  h6 a:visited {
+                      color: #0b0c24 !important;
+                      text-decoration: none;
+                  }
+  
+                   /* Stilovi za e-poštu */
+                  h6 a[href^="mailto:"] {
+                      color: #0b0c24 !important;
+                      text-decoration: none;
+                  }
+  
+                  /* Stilovi za hover nad e-poštom */
+                  h6 a[href^="mailto:"]:hover {
+                      color: #0b0c24 !important; 
+                      text-decoration: underline;                        
+                  }
+              </style>
+              <h6 style="color: #0b0c24 !important">Direktor INVEST BUDUĆNOST Bogdan Radosavljević</h6>
+          </div>
       </footer>
-    </div>
+  </div>
+  
   </body>
 </html>

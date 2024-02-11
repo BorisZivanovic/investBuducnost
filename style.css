@@ -3,3 +3,154 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.ms-4 img {
+  width: 148px;
+  animation: pulse 2s infinite; /* Koristimo CSS animaciju koja se zove 'pulse' i traje 2 sekunde, a ponavlja se beskonačno */
+}
+
+@keyframes pulse {
+  0% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  70% {
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  100% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.custom1-container {
+  background-color: #f0f8ff; /* Light Blue */
+  color: #333; /* Dark Gray */
+}
+
+.section-title {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #005598; /* Dark Blue */
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.section-content {
+  background-color: #e7f3ff; /* Lighter Blue */
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.btn-contact {
+  border: none;
+  padding: 20px 30px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  animation: changeColor 1s infinite alternate;
+}
+
+@keyframes changeColor {
+  0% { background-color: #005598; } /* Dark Blue */
+  50% { background-color: #003366; } /* Darker Blue */
+  100% { background-color: #005598; } /* Dark Blue */
+}
+.btn-contact:hover {
+  background-color: #003366; /* Darker Blue on hover */
+}
+
+
+
+.custom-container {
+  background-color: rgb(229, 237, 240); /* Lighter Blue */
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 30px;
+}
+        .list-group-item {
+            background-color: #e7f3ff; /* Lighter Blue */
+            color: #005598; /* Dark Blue */
+            border-color: #005598; /* Dark Blue */
+            transition: all 0.3s ease;
+        }
+        .list-group-item:hover {
+            background-color: #d6e7ff; /* Light Blue on hover */
+            color: #003366; /* Dark Blue on hover */
+            border-color: #003366; /* Dark Blue on hover */
+            transform: scale(1.05);
+        }
+
+.bi-telephone:hover {
+  color: blue !important; /* Promena boje teksta na hover */
+  cursor: pointer; /* Promena kursora na pointer na hover */
+}
+
+.nav-link button.btn:hover {
+  background-color: white !important; /* Promena pozadinske boje na hover */
+  border-color: white !important; /* Promena boje ivice na hover */
+  color: black !important; /* Promena boje teksta na hover */
+}
+
+/* CSS za hover efekat na linkove u hederu */
+.navbar-nav a:hover, .navbar-nav a:focus {
+  color: blue !important; /* Promenite boju teksta na željenu boju za hover efekat */
+  text-decoration: underline !important; /* Dodajte podvlačenje na hover */
+  background-color: lightblue !important;
+}
+
+/* CSS za hover efekat */
+a:hover, a:focus {
+  color: blue !important; /* Promenite boju teksta na željenu boju za hover efekat */
+  text-decoration: none; /* Uklonite podvlačenje na hover */
+}
+
+/* CSS za hover efekat na ikonicama */
+a.btn:hover, a.btn:focus {
+  background-color: white !important; /* Promenite boju pozadine na željenu boju za hover efekat */
+  border-color: blue !important; /* Promenite boju ivice na željenu boju za hover efekat */
+}
+
+/* CSS za hover efekat na ikonama */
+a.card-link:hover, a.card-link:focus {
+  color: blue !important; /* Promenite boju teksta na željenu boju za hover efekat */
+}
+
+/* Navbar stavke */
+.nav-link:hover {
+  color: blue !important;
+}
+
+/* Dugmad */
+.btn-primary:hover {
+  background-color: #005598 !important;
+  border-color: #005598 !important;
+}
+
+#facebookIcon {
+  color: white; /* Bela boja ikonice */
+  transition: color 0.3s ease; /* Podešavanje tranzicije */
+}
+
+#instagramIcon  {
+  color: #fff; /* Bela boja ikonice */
+  transition: color 0.3s ease; /* Podešavanje tranzicije */
+}
+
+#mailIcon {
+  color: #fff; /* Bela boja ikonice */
+  transition: color 0.3s ease; /* Podešavanje tranzicije */
+}
+
+#scrollToTopButton {
+  cursor: pointer;
+  z-index: 9999;
+}
+
+
+
+
+
+
+

@@ -24,7 +24,7 @@
   </head>
   <body>
     <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" style="border: 1px solid #005598;">
         <div class="container">
           <div class="ms-4">
             <img width="148vw" src="./assets/logo2.png" />
@@ -67,6 +67,10 @@
                 href="/viza.html"
                 >Turistička Viza</a
               >
+              <a class="nav-link mx-3 text-primary" 
+              style="color:#005598 !important" 
+              href="/posao.html"
+              >Zapošljavanje</a>
               <a
                 class="nav-link mx-3 text-primary"
                 style="color: #005598 !important"
@@ -83,6 +87,50 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+
+    <div style="position: fixed; right: 20px; top: 50%; transform: translateY(-50%); z-index: 999;">
+      <!-- Facebook ikonica -->
+      <a href="https://www.facebook.com/investbuducnost" target="_blank" style="display: block; width: 40px; height: 40px; line-height: 40px; text-align: center; background-color: #333; color: #fff; border-radius: 50%; margin-bottom: 10px; transition: background-color 0.3s ease; text-decoration: none;" onmouseover="changeColor(this)" onmouseout="restoreColor(this)"><i id="facebookIcon"  class="bi bi-facebook"></i></a>
+      
+      <!-- Instagram ikonica -->
+      <a href="https://www.instagram.com/invest_buducnost?igsh=OHl3OGV6NDJmcTQ3" target="_blank" style="display: block; width: 40px; height: 40px; line-height: 40px; text-align: center; background-color: #333; color: #fff; border-radius: 50%; margin-bottom: 10px; transition: background-color 0.3s ease; text-decoration: none;" onmouseover="changeColor(this)" onmouseout="restoreColor(this)"><i id="instagramIcon" class="bi bi-instagram"></i></a>
+      
+      <!-- E-pošta (Mail) ikonica -->
+      <a href="mailto:investbuducnost@gmail.com" style="display: block; width: 40px; height: 40px; line-height: 40px; text-align: center; background-color: #333; color: #fff; border-radius: 50%; margin-bottom: 10px; transition: background-color 0.3s ease; text-decoration: none;" onmouseover="changeColor(this)" onmouseout="restoreColor(this)"><i id="mailIcon" class="bi bi-envelope"></i></a>
+    </div>
+
+    <script>
+      function changeColor(element) {
+          element.style.backgroundColor = "blue"; // Boja na hover
+      }
+
+      function restoreColor(element) {
+          element.style.backgroundColor = "#333"; // Početna boja
+      }
+    </script>
+
+    <div id="scrollToTopButton" class="position-fixed bottom-0 end-0 p-3" style="display: none;">
+      <button class="btn btn-primary" onclick="scrollToTop()">
+        <i class="fas fa-chevron-circle-up"></i> Idi na početak
+      </button>
+    </div>
+
+    <script>
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              document.getElementById("scrollToTopButton").style.display = "block";
+          } else {
+              document.getElementById("scrollToTopButton").style.display = "none";
+          }
+      }
+
+      function scrollToTop() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+      }
+    </script>
 
     <div
       class="masthead d-flex justify-content-center align-items-center"
@@ -111,127 +159,131 @@
     </div>
 
     <div class="container mb-2 text-center">
-      <p
-        class="font-weight-light pt-4 pb-2"
-        style="font-size: 2rem; color: #005598 !important"
-      >
-        SOCIJALNE MREŽE
-      </p>
-      <div class="col">
-        <div>
-          <img src="/assets/insta.png" width="80rem" />
-          <br />
-          <h5>invest_buducnost</h5>
-        </div>
-        <br />
-        <div>
-          <img src="/assets/face.png" width="80rem" />
-          <br />
-          <h5>Invest Buducnost</h5>
-        </div>
-        <br />
-        <div>
-          <img src="/assets/gmail.png" width="80rem" />
-          <br />
-          <h5>investbuducnost@gmail.com</h5>
-        </div>
+      <div class="row">
+          <!-- Socijalne mreže -->
+          <div class="col-md-6">
+              <p class="font-weight-light pt-4 pb-2" style="font-size: 2rem; color: #005598 !important">SOCIJALNE MREŽE</p>
+              <div class="col">
+                  <div>
+                      <img src="/assets/insta.png" width="80rem" />
+                      <br />
+                      <h5>invest_buducnost</h5>
+                  </div>
+                  <br />
+                  <div>
+                      <img src="/assets/face.png" width="80rem" />
+                      <br />
+                      <h5>Invest Buducnost</h5>
+                  </div>
+                  <br />
+                  <div>
+                      <img src="/assets/gmail.png" width="80rem" />
+                      <br />
+                      <h5>investbuducnost@gmail.com</h5>
+                  </div>
+              </div>
+          </div>
+          <!-- Kontakt -->
+          <div class="col-md-6">
+              <p class="font-weight-light pt-4 pb-2" style="font-size: 2rem; color: #005598 !important">KONTAKT</p>
+              <div class="col">
+                  <div>
+                      <img src="/assets/phone.png" width="80rem" />
+                      <br />
+                      <br />
+                      <!-- <h6>Generalni Menadžer Đorđe Stamenković</h6> -->
+                      <h6 style="color: #0b0c24 !important">
+                          <i class="bi bi-telephone"></i>
+                          <a href="tel:+381693300363" style="text-decoration: none; color: #0b0c24 !important; cursor: pointer;">+381693300363</a>
+                      </h6>
+                  </div>
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <div>
+                      <img src="/assets/phone.png" width="80rem" />
+                      <br />
+                      <br />
+                      <!-- <h6>Marketing Menadžer Anastasija Petronijević</h6> -->
+                      <h6 style="color: #0b0c24 !important">
+                          <i class="bi bi-telephone"></i>
+                          <a href="tel:+381638145120" style="text-decoration: none; color: #0b0c24 !important; cursor: pointer;">+381638145120</a>
+                      </h6>
+                  </div>
+              </div>
+          </div>
       </div>
-      <br />
-      <div class="col">
-        <p
-          class="font-weight-light pt-4 pb-2"
-          style="font-size: 2rem; color: #005598 !important"
-        >
-          KONTAKT
-        </p>
-        <div>
-          <img src="/assets/phone.png" width="80rem" />
-          <br />
-          <br />
-          <!-- <h6>Generalni Menadžer Đorđe Stamenković</h6> -->
-          <h6 style="color: #0b0c24 !important">
-            <i class="bi bi-telephone"></i
-            ><a
-              href="tel:+381693300363"
-              style="
-                text-decoration: none;
-                color: #0b0c24 !important;
-                cursor: pinter;
-              "
-            >
-              +381693300363</a
-            >
-          </h6>
-        </div>
-        <br />
-        <div>
-          <img src="/assets/phone.png" width="80rem" />
-          <br />
-          <br />
-          <!-- <h6>Marketing Menadžer Anastasija Petronijević</h6> -->
-          <h6 style="color: #0b0c24 !important">
-            <i class="bi bi-telephone"></i
-            ><a
-              href="tel:+381638145120"
-              style="
-                text-decoration: none;
-                color: #0b0c24 !important;
-                cursor: pinter;
-              "
-            >
-            +381638145120</a
-            >
-          </h6>
-        </div>
-      </div>
+  </div>
+  
+  <br />
+  <br />
+
+  <div class="row justify-content-center">
+    <div class="col-md-8 text-center">
+        <p class="font-weight-light pt-4 pb-2" style="font-size: 2rem; color: #005598 !important">LOKACIJA</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2870.7914390359538!2d21.25326821209162!3d43.9843624709676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4756c4416269aab3%3A0x3c76822b60adfa3d!2z0JrQvdC10LfQsCDQnNC40LvQtdGC0LUgNiwg0IjQsNCz0L7QtNC40L3QsCAzNTAwMA!5e0!3m2!1ssr!2srs!4v1707667418804!5m2!1ssr!2srs" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
+  </div>
+
     <br />
     <div class="container-fluid bg-light" id="footer">
-      <footer
-        class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top"
-      >
-        <div class="col-md-4 d-flex align-items-center">
-          <a
-            href="/"
-            class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
-          >
-            <img width="260vw" src="./assets/logo2.png" />
-          </a>
-        </div>
-        <div
-          class="d-flex flex-column justify-content-center align-items-center text-center"
-        >
-          <div class="d-flex flex-column">
-            <h5 style="color: #0b0c24 !important">KONTAKT</h5>
-            <br />
-            <h6 style="color: #0B0C24 !important;"><i class="bi bi-telephone"></i><a href="tel:+381693300363" style="text-decoration: none; color: #0B0C24 !important; cursor: pinter;"> +381693300363</a></h6>
-                <h6 style="color: #0B0C24 !important;"><i class="bi bi-telephone"></i> +381638145120</h6>
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+              <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                  <img width="260vw" src="./assets/logo2.png" class="img-fluid" />
+              </a>
           </div>
-        </div>
-
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-          <div class="d-flex flex-column">
-            <h5 style="color: #0b0c24 !important">SOCIJALNE MREŽE</h5>
-            <br />
-            <h6 style="color: #0b0c24 !important">
-              <i class="bi bi-facebook"></i> Invest Buducnost
-            </h6>
-            <h6 style="color: #0b0c24 !important">
-              <i class="bi bi-instagram"></i> invest_buducnost
-            </h6>
-            <h6 style="color: #0b0c24 !important">
-              <i class="bi bi-envelope"></i> investbuducnost@gmail.com
-            </h6>
+  
+          <div class="col-md-4 d-flex flex-column align-items-center text-center">
+              <h5 style="color: #0b0c24 !important">KONTAKT</h5>
+              <h6 style="color: #0B0C24 !important;"><i class="bi bi-telephone"></i><a href="tel:+381693300363" style="text-decoration: none; color: #0B0C24 !important; cursor: pinter;"> +381692601500</h6>
+              <h6 style="color: #0B0C24 !important;"><i class="bi bi-telephone"></i> +381693300363</a></h6>          </div>
+  
+          <div class="col-md-4 d-flex flex-column align-items-center text-center">
+              <h5 style="color: #0b0c24 !important">SOCIJALNE MREŽE</h5>
+              <h6 style="color: #0b0c24 !important"><a href="https://www.facebook.com/investbuducnost" target="_blank"><i class="bi bi-facebook" style="color: blue !important"></i> Invest Budućnost</a></h6>
+              <h6 style="color: #0b0c24 !important"><a href="https://www.instagram.com/invest_buducnost/" target="_blank"><i class="bi bi-instagram" style="color: blue !important"></i> invest_buducnost</a></h6>
+              <h6 style="color: #0b0c24 !important"><a href="mailto:investbuducnost@gmail.com" target="_blank"><i class="bi bi-envelope" style="color: blue !important"></i> investbuducnost@gmail.com</a></h6>
           </div>
-        </ul>
-        <div
-          class="col-12 justify-content-center align-items-center text-center mt-4"
-        >
-          <h6 style="color: #0b0c24 !important">
-            Direktor INVEST BUDUCNOST Bogdan Radosavljević
-          </h6>
-        </div>
+  
+          <div class="col-12 d-flex justify-content-center align-items-center text-center mt-4">
+              <style>
+                  /* Stilovi za linkove */
+                  h6 a {
+                      color: #0b0c24 !important;
+                      text-decoration: none;
+                  }
+              
+                  /* Stilovi za hover */
+                  h6 a:hover {
+                      color: blue !important;
+                      text-decoration: underline;
+                      background-color: lightblue;
+                  }
+              
+                  /* Stilovi za posećene linkove */
+                  h6 a:visited {
+                      color: #0b0c24 !important;
+                      text-decoration: none;
+                  }
+  
+                   /* Stilovi za e-poštu */
+                  h6 a[href^="mailto:"] {
+                      color: #0b0c24 !important;
+                      text-decoration: none;
+                  }
+  
+                  /* Stilovi za hover nad e-poštom */
+                  h6 a[href^="mailto:"]:hover {
+                      color: #0b0c24 !important; 
+                      text-decoration: underline;                        
+                  }
+              </style>
+              <h6 style="color: #0b0c24 !important">Direktor INVEST BUDUĆNOST Bogdan Radosavljević</h6>
+          </div>
       </footer>
-    </div>
+  </div>
+
   </body>
 </html>
